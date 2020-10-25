@@ -10,6 +10,8 @@ export interface ITask {
 }
 
 // Actions
+
+// typeof работает на как в js - тут он означает что type является типом определенной константы, связь жесткая!!!
 interface IAddTaskAction {
     type: typeof ADD_TASK,
     payload: ITask,
@@ -36,5 +38,7 @@ interface IChangeFilterAction {
     }
 }
 
+
+// тип - объединение типов
 export type TaskActionTypes = IAddTaskAction | IRemoveTaskAction | ICompleteTaskAction;
 export type FilterActionType = IChangeFilterAction;
